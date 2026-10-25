@@ -1,0 +1,78 @@
+:root {
+  --paper: #F7F8FA;
+  --ink: #1B2A41;
+  --muted: #5B6575;
+  --brass: #9C7A3C;
+  --rule: #D9DEE5;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #10161F;
+    --ink: #E6E9EE;
+    --muted: #9AA4B2;
+    --brass: #C9A66B;
+    --rule: #2A3443;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Libre Caslon Text", Georgia, "Times New Roman", serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+.page {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+}
+.seal {
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 2px solid var(--brass);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--brass);
+  font-size: 2.25rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+  outline: 1px solid var(--brass);
+  outline-offset: 4px;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 0 0 1rem;
+}
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 2.25rem 0 0.5rem;
+}
+p, li { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+.lede { font-size: 1.1875rem; color: var(--muted); }
+.meta { color: var(--muted); font-size: 0.9375rem; }
+a { color: var(--brass); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 2px; }
+nav {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  font-size: 0.9375rem;
+}
+@media (max-width: 30rem) {
+  .page { padding-top: 2.5rem; }
+  h1 { font-size: 1.875rem; }
+}
